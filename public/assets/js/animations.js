@@ -82,8 +82,9 @@ if (!reducedMotion.matches) {
         element.style.transform = "translateY(1.5rem)";
     });
 
-    import("https://cdn.jsdelivr.net/npm/motion@13.4.0/+esm")
-        .then(({ animate, inView }) => {
+    if (revealElements.length) {
+        import("https://cdn.jsdelivr.net/npm/motion@13.4.0/+esm")
+            .then(({ animate, inView }) => {
             revealElements.forEach((element) => {
                 inView(
                     element,
@@ -108,11 +109,12 @@ if (!reducedMotion.matches) {
                     { amount: 0.18, margin: "0px 0px -6% 0px" }
                 );
             });
-        })
-        .catch(() => {
-            revealElements.forEach((element) => {
-                element.style.removeProperty("opacity");
-                element.style.removeProperty("transform");
+            })
+            .catch(() => {
+                revealElements.forEach((element) => {
+                    element.style.removeProperty("opacity");
+                    element.style.removeProperty("transform");
+                });
             });
-        });
+    }
 }

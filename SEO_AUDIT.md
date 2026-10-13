@@ -6,7 +6,7 @@ Audit date: 2026-09-29
 
 - The site is static HTML, CSS, and progressive JavaScript hosted on GitHub Pages.
 - The main content is present in the initial HTML; search engines do not need JavaScript to render it.
-- `/` is the only intended indexable content page.
+- `/` and `/places-to-visit-in-kanthalloor.html` are the intended indexable content pages.
 - `/photo-credits.html` is intentionally `noindex, follow` and is therefore omitted from the sitemap.
 - `robots.txt` allows crawling and points to the production sitemap.
 - The HTTP and `www` variants permanently redirect to the canonical non-`www` HTTPS host.
@@ -74,3 +74,15 @@ Audit date: 2026-09-29
 5. Validate deployed structured data with Google's Rich Results Test and inspect the canonical URL in Search Console.
 
 SEO improvements do not guarantee rankings. Sustainable gains will depend most on useful original content, accurate local information, reputable references and links, and continued Search Console monitoring.
+
+## Page record: Places to Visit in Kanthalloor
+
+- Route: `/places-to-visit-in-kanthalloor.html`
+- Primary intent: Places to visit in Kanthalloor
+- Secondary intents: Kanthalloor tourist places, sightseeing, local sightseeing, attractions, waterfalls, fruit farms, viewpoints, jeep safari, and places near Kanthalloor
+- Title: `Places to Visit in Kanthalloor | Tourist Places & Sightseeing`
+- Meta description: `Discover places to visit in Kanthalloor, including waterfalls, fruit farms, viewpoints, jeep safari experiences, heritage sites and attractions near Kanthalloor.`
+- H1: `Places to Visit in Kanthalloor`
+- Canonical: `https://kanthalloortouristguide.com/places-to-visit-in-kanthalloor.html`
+- Structured data: `WebPage` and `BreadcrumbList`, linked to the existing website and destination entities
+- Internal links added: homepage places section and footer to the new guide; guide to homepage, stays, trip-planning contact, and its own content sections

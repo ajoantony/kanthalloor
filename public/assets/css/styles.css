@@ -1782,6 +1782,21 @@ h3 {
     .guide-card:last-child:nth-child(odd) {
         grid-column: auto;
     }
+
+    .heritage-card-grid {
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        grid-template-rows: repeat(2, minmax(0, auto));
+        align-items: stretch;
+    }
+
+    .heritage-card-grid .guide-card-featured {
+        grid-row: 1 / span 2;
+    }
+
+    .heritage-card-grid .guide-card-text > div {
+        justify-content: center;
+        padding-block: clamp(1.75rem, 3vw, 2.5rem);
+    }
 }
 
 /* Refined editorial cards and direct-contact layout */
@@ -2129,6 +2144,7 @@ h3 {
 }
 
 .real-gallery-compact .real-gallery-grid figure {
+    grid-column: auto;
     min-height: 20rem;
 }
 

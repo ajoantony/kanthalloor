@@ -86,3 +86,30 @@ The Pages workflow deploys only the contents of `public/` when changes reach
 the `main` branch. In the repository's **Settings > Pages** screen, set the
 source to **GitHub Actions**. You can also run the workflow manually from the
 Actions tab.
+
+## Production security headers
+
+`public/_headers` defines the production policy for Cloudflare Pages or
+Netlify. It includes HSTS, CSP, clickjacking protection, MIME-sniffing
+protection, Referrer Policy and Permissions Policy. `public/.htaccess` contains
+the equivalent policy for Apache/cPanel hosting.
+
+GitHub Pages does not apply either configuration file. The headers will not be
+present on the live site while GitHub Pages serves the domain directly.
+
+The simplest supported route is Cloudflare Pages:
+
+1. Create a Cloudflare Pages project connected to this repository.
+2. Leave the build command empty and set the output directory to `public`.
+3. Verify the preview deployment before attaching the production domain.
+4. Add `kanthalloortouristguide.com` as the custom domain and follow the DNS
+   instructions shown by Cloudflare.
+5. Verify the production response headers after the DNS change.
+
+Alternatively, keep GitHub Pages as the origin and proxy the domain through
+Cloudflare. In that arrangement, configure the same policy with a Cloudflare
+Response Header Transform Rule or Worker; the repository `_headers` file is
+still ignored by GitHub Pages.
+
+Do not add HSTS `includeSubDomains` or `preload` until every subdomain is known
+to support HTTPS permanently.

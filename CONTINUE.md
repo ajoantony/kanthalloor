@@ -29,4 +29,7 @@ No implementation step remains in the current plan. Review the accumulated diff 
 - Desktop QA at 1440 × 900 and mobile QA at 390 × 844 found no horizontal page overflow.
 - Key Places desktop and Experiences mobile views were visually inspected.
 - The expanded Places page was revalidated at desktop and mobile widths after removing geographic badges and adding verified missing destinations; no horizontal overflow was found.
+- The SEO audit was refreshed on 2026-10-14; sitemap dates, Experiences/Stays structured data, JSON-LD parsing and six-page indexable sitemap coverage were revalidated locally.
+- Homepage Organization structured data now includes a description and two customer-service contact points. Security headers are prepared in `_headers` and `.htaccess` but require a configurable production host or Cloudflare proxy before they become live.
+- The public image directory was re-audited and four unused Golden Hills/Hairpin Road variants were moved to the private archive; no unreferenced content images remain public.
 - Nothing has been deployed.

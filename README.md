@@ -24,8 +24,43 @@ A fast, dependency-free tourism website for Kanthalloor and Marayoor, Kerala.
 
 ## Run locally
 
-Open `public/index.html` directly in a browser, or serve the `public/` directory
-with any static file server.
+This is a static website, so there are no packages to install and no build step.
+
+### Recommended: local web server
+
+From the repository root, run:
+
+```powershell
+python -m http.server 8000 --directory public
+```
+
+If Windows does not recognize `python`, try the Python launcher instead:
+
+```powershell
+py -m http.server 8000 --directory public
+```
+
+Then open [http://localhost:8000](http://localhost:8000) in a browser. Keep the
+terminal window open while using the site. Press `Ctrl+C` in that terminal to
+stop the server.
+
+### Node.js alternative
+
+If Node.js is installed, you can serve the site without adding anything to the
+repository:
+
+```powershell
+npx serve public
+```
+
+Open the local address printed by `serve`, usually
+[http://localhost:3000](http://localhost:3000).
+
+### Open without a server
+
+You can also double-click `public/index.html`. Most of the site works through a
+`file://` URL, but a local web server is recommended because it more closely
+matches production hosting and avoids browser restrictions on local files.
 
 No build step is required.
 

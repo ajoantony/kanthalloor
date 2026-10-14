@@ -1414,30 +1414,19 @@ h3 {
 }
 
 .guide-card-text {
-    min-height: 22rem;
-    background:
-        radial-gradient(circle at 84% 15%, rgba(190, 125, 78, 0.24) 0 3rem, transparent 3.05rem),
-        linear-gradient(145deg, #e7eee7, #f8f5ed 58%);
+    background: var(--paper);
 }
 
 .guide-card-text::before {
-    content: "";
-    position: absolute;
-    top: 3.1rem;
-    left: 1.5rem;
-    width: 4.5rem;
-    height: 2.5rem;
-    border-top: 2px solid rgba(41, 75, 58, 0.35);
-    border-left: 2px solid rgba(41, 75, 58, 0.35);
-    transform: skewY(-28deg) rotate(6deg);
+    content: none;
 }
 
 .guide-card-text > div {
-    justify-content: flex-end;
-    padding-top: 7rem;
-    border-top: 0;
-    border-bottom: 3px solid var(--clay);
-    background: transparent;
+    justify-content: flex-start;
+    padding: clamp(1.25rem, 2.2vw, 1.65rem);
+    border-top: 3px solid var(--clay);
+    border-bottom: 0;
+    background: linear-gradient(155deg, var(--paper), #f8f2e9);
 }
 
 .guide-card h3,

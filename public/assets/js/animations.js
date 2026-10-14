@@ -67,11 +67,13 @@ if (whatsappMenu) {
 if (!reducedMotion.matches) {
     const revealGroups = [
         ".intro-grid > *",
+        ".destination-facts-layout > *",
         ".nature-gallery-heading",
         ".nature-gallery-grid > *",
         ".section-heading > *",
         ".place-grid > *",
         ".experience-layout > *",
+        ".trip-note-grid > *",
         ".stay-list > *",
         ".plan-grid > *"
     ];

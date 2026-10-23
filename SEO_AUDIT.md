@@ -9,9 +9,9 @@ The site is dependency-free static HTML served from `public/`. Important page co
 Six pages are indexable and included in `public/sitemap.xml`:
 
 - `/`
-- `/kanthalloor-packages.html`
+- `/kanthalloortour-packages.html`
 - `/kanthalloor-experiences.html`
-- `/kanthalloor-stays.html`
+- `/kanthalloormudhouse-stays.html`
 - `/places-to-visit-in-kanthalloor.html`
 - `/contact.html`
 
